@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  background: #F0EDED;
+  color: #331D01;
+  -webkit-font-smoothing: antialiased;
+}
+
+.heading {
+  font-family: 'Jost', system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.btn-primary {
+  background: #EC9247;
+  color: #331D01;
+  font-family: 'Jost', system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: inline-block;
+}
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(51,29,1,0.18); }
+.btn-primary:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+.btn-ghost {
+  background: transparent;
+  color: #331D01;
+  border: 1px solid #B49F90;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-family: 'Jost', system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(51, 29, 1, 0.08);
+  padding: 28px;
+}
+
+.option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #B49F90;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.option:hover { border-color: #EC9247; }
+.option.selected { border-color: #EC9247; background: #FFF6EC; }
+
+.fade-in { animation: fade 0.35s ease both; }
+@keyframes fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.report-html h2 { font-family: 'Jost', sans-serif; text-transform: uppercase; color: #331D01; font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; letter-spacing: 0.04em; }
+.report-html h3 { font-family: 'Jost', sans-serif; color: #786455; margin-top: 1rem; margin-bottom: 0.4rem; }
+.report-html p { margin-bottom: 0.75rem; line-height: 1.6; }
+.report-html ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+.report-html li { margin-bottom: 0.3rem; line-height: 1.5; }
+.report-html strong { color: #331D01; }
